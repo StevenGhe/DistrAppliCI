@@ -10,6 +10,6 @@ sudo: required
 services:
 - docker
 script:
-- docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+- docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
 - mvn clean package docker:build
 - docker push 0626062/distriapplici:latest
