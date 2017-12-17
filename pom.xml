@@ -69,7 +69,7 @@
                            <outputDirectory>${basedir}/target</outputDirectory>
                            <resources>
                                <resource>
-                                   <directory>${basedir}</directory>
+                                   <directory>src/main/docker</directory>
                                    <filtering>true</filtering>
                                </resource>
                            </resources>
