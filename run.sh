@@ -1,2 +1,2 @@
 #!/bin/sh
-java -jar D:/Distri/destinationDb/target/my-service-0.0.1-SNAPSHOT.jar
+java -jar /usr/local/licensingservice/@project.build.finalName@.jar
