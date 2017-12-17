@@ -6,10 +6,11 @@ jdk:
 - oraclejdk8
 script:
 - mvn clean package
+
 sudo: required
 services:
 - docker
 script:
-- docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
+- docker login -u 0626062 -p Dockerpw
 - mvn clean package docker:build
 - docker push 0626062/distriapplici:latest
