@@ -13,3 +13,4 @@ services:
 script:
 - docker login -u 0626062 -p Dockerpw
 - mvn clean package docker:build
+- docker push 0626062/distriapplici:latest
