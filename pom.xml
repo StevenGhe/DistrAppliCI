@@ -67,12 +67,6 @@
                        </goals>
                        <configuration>
                            <outputDirectory>${basedir}/target/dockerfile</outputDirectory>
-                           <resources>
-                               <resource>
-                                   <directory>src/main/docker</directory>
-                                   <filtering>true</filtering>
-                               </resource>
-                           </resources>
                        </configuration>
                    </execution>
                </executions>
