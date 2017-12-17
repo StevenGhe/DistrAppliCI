@@ -1,5 +1,2 @@
 #!/bin/sh
-echo "--------------------------------"
-echo "Starting Destination Service Server"
-echo "--------------------------------"
-java -jar /usr/local/licensingservice/@project.build.finalName@.jar
+java -jar /usr/local/myservice/my-service-0.0.1-SNAPSHOT.jar
