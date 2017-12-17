@@ -67,6 +67,12 @@
                        </goals>
                        <configuration>
                            <outputDirectory>${basedir}/target</outputDirectory>
+                           <resources>
+                               <resource>
+                                   <directory>${basedir}</directory>
+                                   <filtering>true</filtering>
+                               </resource>
+                           </resources>
                        </configuration>
                    </execution>
                </executions>
