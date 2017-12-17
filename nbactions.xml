@@ -12,6 +12,8 @@
             <properties>
                 <exec.args>-classpath %classpath app.Application</exec.args>
                 <exec.executable>java</exec.executable>
+                <Env.DOCKER_USERNAME>0626062µ</Env.DOCKER_USERNAME>
+                <Env.DOCKER_PASSWORD>Dockerpw</Env.DOCKER_PASSWORD>
             </properties>
         </action>
     </actions>
