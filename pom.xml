@@ -66,7 +66,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${basedir}/target</outputDirectory>
+                            <outputDirectory>${basedir}/target/dockerfile</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>/</directory>
@@ -83,8 +83,8 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.10</version>
                 <configuration>
-                    <imageName>distriapplici:latest</imageName>
-                    <dockerDirectory>/</dockerDirectory>
+                    <imageName>0626062/distriapplici:latest</imageName>
+                    <dockerDirectory>${basedir}/target/dockerfile</dockerDirectory>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
