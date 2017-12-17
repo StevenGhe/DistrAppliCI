@@ -18,6 +18,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
+        <docker.image.name>0626062/distriapplici</docker.image.name>
+        <docker.image.tag>latest</docker.image.tag>
     </properties>
 
     <dependencies>
@@ -55,12 +57,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-                        
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>
                     <execution>
                         <id>copy-resources</id>
+                        <!-- here the phase you need -->
                         <phase>validate</phase>
                         <goals>
                             <goal>copy-resources</goal>
@@ -69,7 +71,7 @@
                             <outputDirectory>${basedir}/target/dockerfile</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>/</directory>
+                                    <directory>src/main/docker</directory>
                                     <filtering>true</filtering>
                                 </resource>
                             </resources>
@@ -83,7 +85,7 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.10</version>
                 <configuration>
-                    <imageName>0626062/distriapplici:latest</imageName>
+                    <imageName>${docker.image.name}:${docker.image.tag}</imageName>
                     <dockerDirectory>${basedir}/target/dockerfile</dockerDirectory>
                     <resources>
                         <resource>

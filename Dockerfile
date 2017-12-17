@@ -1,7 +1,8 @@
 FROM openjdk:8-jdk-alpine
 RUN apk update && apk upgrade && apk add netcat-openbsd
-RUN mkdir -p /usr/local/myservice
-ADD my-service-0.0.1-SNAPSHOT.jar /usr/local/myservice
-ADD run.sh run.sh
-RUN chmod +x run.sh
-CMD ./run.sh
+WORKDIR /app
+ADD . /app
+#ADD run.sh run.sh
+#RUN chmod +x run.sh
+EXPOSE 80
+CMD ["echo", "test travis"]
