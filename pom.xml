@@ -77,7 +77,7 @@
                <artifactId>docker-maven-plugin</artifactId>
                <version>0.4.10</version>
                <configuration>
-                   <imageName>$distriapplici:$latest</imageName>
+                   <imageName>distriapplici:latest</imageName>
                    <dockerDirectory>${basedir}/target</dockerDirectory>
                    <resources>
                        <resource>
